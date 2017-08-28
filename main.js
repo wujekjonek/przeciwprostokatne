@@ -35,16 +35,18 @@ console.log(mapx.get("1")); // value1
 console.log(mapy.get("1")); // value1
 function przeciwprostokatne() {
     ctx.moveTo(mapx.get(1), mapy.get(1));
-    // for (let i = 1; i < (a + 1); i++) {
-    //     ctx.lineTo(mapx.get(i), mapy.get(i));
-    for (var k = i; k < (a + 1); k++) {
-        // console.log("aaaaaaaaaaaaaaaaa");
-        // ctx.moveTo(mapx.get(i), mapy.get(i));
-        // ctx.lineTo(mapx.get(i+2), mapy.get(i+2));
+    for (var i = 1; i < (a + 1); i++) {
+        //     ctx.lineTo(mapx.get(i), mapy.get(i));
+        for (var k = i; k < (a + 1); k++) {
+            // console.log("aaaaaaaaaaaaaaaaa");
+            ctx.moveTo(mapx.get(i), mapy.get(i));
+            ctx.lineTo(mapx.get(k), mapy.get(k));
+            ctx.moveTo(mapx.get(i), mapy.get(i));
+        }
     }
+    ctx.lineTo(mapx.get(1), mapy.get(1));
+    ctx.stroke();
 }
-ctx.lineTo(mapx.get(1), mapy.get(1));
-ctx.stroke();
 function drawPoint(angle, distance, label) {
     var x = center_x + radius * Math.cos(-angle * Math.PI / 180) * distance;
     var y = center_y + radius * Math.sin(-angle * Math.PI / 180) * distance;
