@@ -36,15 +36,15 @@ console.log(mapy.get("1")); // value1
 function przeciwprostokatne() {
     ctx.moveTo(mapx.get(1), mapy.get(1));
     for (var i = 1; i < (a + 1); i++) {
-        //     ctx.lineTo(mapx.get(i), mapy.get(i));
+        // ctx.lineTo(mapx.get(i), mapy.get(i));
         for (var k = i; k < (a + 1); k++) {
-            // console.log("aaaaaaaaaaaaaaaaa");
+            console.log("aaaaaaaaaaaaaaaaa");
             ctx.moveTo(mapx.get(i), mapy.get(i));
             ctx.lineTo(mapx.get(k), mapy.get(k));
             ctx.moveTo(mapx.get(i), mapy.get(i));
         }
     }
-    ctx.lineTo(mapx.get(1), mapy.get(1));
+    //   ctx.lineTo(mapx.get(1), mapy.get(1));
     ctx.stroke();
 }
 function drawPoint(angle, distance, label) {
