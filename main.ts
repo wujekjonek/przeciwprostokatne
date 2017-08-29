@@ -1,13 +1,16 @@
 //Define Variables
-var radius = 290;
-var point_size = 4;
-var center_x = 400;
-var center_y = 300;
-var font_size = "20px";
+let radius = 290;
+let point_size = 4;
+let center_x = 400;
+let center_y = 300;
+let font_size = "20px";
 
-var c = document.getElementById("myCanvas");
-var ctx = c.getContext("2d");
+let c = document.getElementById("myCanvas");
+let ctx = c.getContext("2d");
 
+
+
+Kolo.rysuj(100, 100, 50);
 
 okreg01 = new Okreg(400, 300, radius);
 okreg01.rysuj();
@@ -17,15 +20,10 @@ okreg01.rysuj();
 
 
 let mapx = new Map();
-// mapx.set("1", 123);
-// mapx.set("2", 123);
+
 
 
 let mapy = new Map();
-// mapy.set("1", 212412);
-// mapy.set("2", 4353453);
-
-
 
 
 
@@ -35,6 +33,11 @@ let a;
 function pentlaglowna() {
 
     ctx.clearRect(0, 0, 800, 600);
+
+    Kolo.rysuj(100, 100, 50);
+
+    Kolo.rysujmale(200,200,20);
+
     okreg01.rysuj();
 
     a = parseInt((<HTMLInputElement>document.getElementById("okienkoa")).value);
@@ -59,31 +62,20 @@ console.log(mapy.get("1")); // value1
 function przeciwprostokatne() {
     ctx.moveTo(mapx.get(1), mapy.get(1));
 
-     for (let i = 1; i < (a + 1); i++) {
+    for (let i = 1; i < (a + 1); i++) {
         // ctx.lineTo(mapx.get(i), mapy.get(i));
-
-
-
-        for (let k=i; k < (a+1); k++) {
-             console.log("aaaaaaaaaaaaaaaaa");
-
-
+        for (let k = i; k < (a + 1); k++) {
+            console.log("aaaaaaaaaaaaaaaaa");
             ctx.moveTo(mapx.get(i), mapy.get(i));
             ctx.lineTo(mapx.get(k), mapy.get(k));
             ctx.moveTo(mapx.get(i), mapy.get(i));
-
-
         }
-   }
-  //   ctx.lineTo(mapx.get(1), mapy.get(1));
+    }
+    //   ctx.lineTo(mapx.get(1), mapy.get(1));
     ctx.closePath();
     ctx.strokeStyle = "red";
-
     ctx.stroke();
 }
-
-
-
 
 
 function drawPoint(angle, distance, label) {
