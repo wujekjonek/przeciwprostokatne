@@ -29,7 +29,6 @@ function pentlaglowna() {
     Kolo.rysuj(100, 100, 50);
     Kolo.rysujmale(100, 500, 20);
 
-
     okreg01.rysuj();
     a = parseInt((<HTMLInputElement>document.getElementById("okienkoa")).value);
 
