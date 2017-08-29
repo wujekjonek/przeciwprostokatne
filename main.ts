@@ -67,12 +67,18 @@ function przeciwprostokatne() {
         for (let k=i; k < (a+1); k++) {
              console.log("aaaaaaaaaaaaaaaaa");
 
+
             ctx.moveTo(mapx.get(i), mapy.get(i));
             ctx.lineTo(mapx.get(k), mapy.get(k));
             ctx.moveTo(mapx.get(i), mapy.get(i));
+
+
         }
    }
   //   ctx.lineTo(mapx.get(1), mapy.get(1));
+    ctx.closePath();
+    ctx.strokeStyle = "red";
+
     ctx.stroke();
 }
 

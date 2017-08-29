@@ -45,6 +45,8 @@ function przeciwprostokatne() {
         }
     }
     //   ctx.lineTo(mapx.get(1), mapy.get(1));
+    ctx.closePath();
+    ctx.strokeStyle = "red";
     ctx.stroke();
 }
 function drawPoint(angle, distance, label) {

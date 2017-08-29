@@ -17,6 +17,11 @@ class Okreg {
     rysuj(){
         ctx.beginPath();
         ctx.arc(this.center_x, this.center_y, this.radius, 0, 2 * Math.PI);
+        ctx.closePath();
+        ctx.strokeStyle = "green";
         ctx.stroke();
+
+
+
     }
 }
