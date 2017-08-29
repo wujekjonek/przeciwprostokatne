@@ -3,20 +3,20 @@
 class Okreg {
 
     // POLA KLASY
-    center_x: number;
-    center_y: number;
-    radius: number;
+    a: number;
+    b: number;
+    c: number;
 
     // KONSTRUKTOR
-    constructor(a: number, b: number, c: number) {
-        this.center_x = a;
-        this.center_y = b;
-        this.radius = c;
+    constructor(srodek_szerokosci: number, srodek_wysokosci: number, promien: number) {
+        this.a = srodek_szerokosci;
+        this.b = srodek_wysokosci;
+        this.c = promien;
     }
 
     rysuj(){
         ctx.beginPath();
-        ctx.arc(this.center_x, this.center_y, this.radius, 0, 2 * Math.PI);
+        ctx.arc(this.a, this.b, this.c, 0, 2 * Math.PI);
         ctx.closePath();
         ctx.strokeStyle = "green";
         ctx.stroke();

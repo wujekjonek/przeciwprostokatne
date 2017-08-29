@@ -1,13 +1,13 @@
 var Okreg = (function () {
     // KONSTRUKTOR
-    function Okreg(a, b, c) {
-        this.center_x = a;
-        this.center_y = b;
-        this.radius = c;
+    function Okreg(srodek_szerokosci, srodek_wysokosci, promien) {
+        this.a = srodek_szerokosci;
+        this.b = srodek_wysokosci;
+        this.c = promien;
     }
     Okreg.prototype.rysuj = function () {
         ctx.beginPath();
-        ctx.arc(this.center_x, this.center_y, this.radius, 0, 2 * Math.PI);
+        ctx.arc(this.a, this.b, this.c, 0, 2 * Math.PI);
         ctx.closePath();
         ctx.strokeStyle = "green";
         ctx.stroke();
