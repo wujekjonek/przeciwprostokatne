@@ -9,7 +9,7 @@ let c = document.getElementById("myCanvas");
 let ctx = c.getContext("2d");
 
 
-Kolo.rysuj(100, 100, 50);
+
 
 okreg01 = new Okreg(400, 300, radius);
 okreg01.rysuj();
@@ -27,27 +27,18 @@ function pentlaglowna() {
     ctx.clearRect(0, 0, 800, 600);
 
     Kolo.rysuj(100, 100, 50);
-
     Kolo.rysujmale(100, 500, 20);
 
 
     okreg01.rysuj();
-
-
     a = parseInt((<HTMLInputElement>document.getElementById("okienkoa")).value);
-    // a = document.getElementById("okienkoa").value;
-
 
     for (let i = 1; i < (a + 1); i++) {
-
-
         punkty01 = new Punkty(((360 / a) * i), 1, i);
         punkty01.rysuj();
-
     }
 
 
-    //   przeciwprostokatne();
 
 // 3)
     PProstokatne.rysuj(mapx, mapy);
@@ -64,6 +55,3 @@ function pentlaglowna() {
 }
 
 
-function glowna() {
-
-}
