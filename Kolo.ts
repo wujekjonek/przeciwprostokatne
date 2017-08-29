@@ -13,22 +13,22 @@
 
 class Kolo {
 
-    public static rysuj(center_x,center_y,promień): void {
-        console.log("funkcja kolo ");
+    public static rysuj(center_x,center_y,promien): void {
+        console.log("Kolo.rysuj ");
         ctx.beginPath();
-        ctx.arc(center_x, center_y, promień, 0, 2 * Math.PI);
+        ctx.arc(center_x, center_y, promien, 0, 2 * Math.PI);
         ctx.closePath();
-        ctx.strokeStyle = "blue";
+        ctx.strokeStyle = "#0043aa";
         ctx.stroke();
     }
 
 
     public static rysujmale(center_x,center_y,radius): void {
-        console.log("funkcja kolo ");
+        console.log("Kolo.rysujmale ");
         ctx.beginPath();
         ctx.arc(center_x, center_y, radius, 0, 2 * Math.PI);
         ctx.closePath();
-        ctx.strokeStyle = "pink";
+        ctx.strokeStyle = "#a730aa";
         ctx.stroke();
     }
 

@@ -9,61 +9,29 @@ var ctx = c.getContext("2d");
 Kolo.rysuj(100, 100, 50);
 okreg01 = new Okreg(400, 300, radius);
 okreg01.rysuj();
-// punkty01 = new Punkty();
-// punkty01.rysuj();
 var mapx = new Map();
 var mapy = new Map();
 var a;
 function pentlaglowna() {
     ctx.clearRect(0, 0, 800, 600);
     Kolo.rysuj(100, 100, 50);
-    Kolo.rysujmale(200, 200, 20);
+    Kolo.rysujmale(100, 500, 20);
     okreg01.rysuj();
     a = parseInt(document.getElementById("okienkoa").value);
     // a = document.getElementById("okienkoa").value;
     for (var i = 1; i < (a + 1); i++) {
-        //   console.log("i= " + i + "; a =" + a);
-        drawPoint(((360 / a) * i), 1, i);
-        // console.log("x= " +mapx.get(i)); // value1
-        // console.log("y= " +mapy.get(i)); // value1
+        punkty01 = new Punkty(((360 / a) * i), 1, i);
+        punkty01.rysuj();
     }
-    console.log("qqqqqqqqqqqqqqqqqqqqqq");
-    przeciwprostokatne();
-}
-console.log(mapx.get("1")); // value1
-console.log(mapy.get("1")); // value1
-function przeciwprostokatne() {
-    ctx.moveTo(mapx.get(1), mapy.get(1));
-    for (var i = 1; i < (a + 1); i++) {
-        // ctx.lineTo(mapx.get(i), mapy.get(i));
-        for (var k = i; k < (a + 1); k++) {
-            console.log("aaaaaaaaaaaaaaaaa");
-            ctx.moveTo(mapx.get(i), mapy.get(i));
-            ctx.lineTo(mapx.get(k), mapy.get(k));
-            ctx.moveTo(mapx.get(i), mapy.get(i));
-        }
-    }
-    //   ctx.lineTo(mapx.get(1), mapy.get(1));
-    ctx.closePath();
-    ctx.strokeStyle = "red";
-    ctx.stroke();
-}
-function drawPoint(angle, distance, label) {
-    var x = center_x + radius * Math.cos(-angle * Math.PI / 180) * distance;
-    var y = center_y + radius * Math.sin(-angle * Math.PI / 180) * distance;
-    ctx.beginPath();
-    ctx.arc(x, y, point_size, 0, 2 * Math.PI);
-    mapx.set(label, x);
-    mapy.set(label, y);
-    ctx.fill();
-    ctx.font = font_size;
-    ctx.fillText(label, x + 10, y);
-    //   console.log("x: " + x + "; y:" + y);
-    ctx.beginPath();
-    // ** to rysuje kreski ze środka **
-    // ctx.moveTo(400, 300);
-    // ctx.lineTo(x, y);
-    // ctx.stroke();
+    //   przeciwprostokatne();
+    // 3)
+    PProstokatne.rysuj(mapx, mapy);
+    // 2)
+    //     pprostokatne01 = new PProstokatne();
+    //     pprostokatne01.rysuj(mapx, mapy);
+    // 1)
+    // pprostokatne01 = new PProstokatne(mapx, mapy);
+    // pprostokatne01.rysuj();
 }
 function glowna() {
 }
