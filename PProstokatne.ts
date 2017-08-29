@@ -7,13 +7,13 @@ class PProstokatne {
         for (let i = 1; i < (a + 1); i++) {
             console.log("x= " + mapx.get(i));
             console.log("y= " + mapy.get(i));
-
             for (let k = i; k < (a + 1); k++) {
                 console.log("pentla rysuje przeciwprostokatne");
-                ctx.strokeStyle = "#ff5f55";
+                ctx.strokeStyle = "#ff4932";
                 ctx.moveTo(mapx.get(i), mapy.get(i));
                 ctx.lineTo(mapx.get(k), mapy.get(k));
                 ctx.moveTo(mapx.get(i), mapy.get(i));
+
             }
         }
         ctx.stroke();
