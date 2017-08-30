@@ -10,10 +10,10 @@ let ctx = c.getContext("2d");
 
 
 okreg01 = new Okreg(400, 300, radius);
-okreg01.rysuj();
+//okreg01.rysuj();
 
 okreg02 = new Okreg(50, 50, 20);
-okreg02.rysuj();
+//okreg02.rysuj();
 
 
 
@@ -30,12 +30,24 @@ function pentlaglowna() {
 
     ctx.clearRect(0, 0, 800, 600);
 
-    Kolo.rysuj(100, 100, 50, "blue");
 
-    Kolo.rysuj(100, 550, 20, "red")
+    let xx = document.getElementById("myCheck").checked;
 
 
-    okreg01.rysuj();
+    if (xx == true) {
+        console.log("uuuuuu");
+        okreg01.rysuj();
+    }
+
+
+
+
+   // Kolo.rysuj(100, 100, 50, "blue");
+
+ //   Kolo.rysuj(100, 550, 20, "red")
+
+
+  //  okreg01.rysuj();
     a = parseInt((<HTMLInputElement>document.getElementById("okienkoa")).value);
 
     for (let i = 1; i < (a + 1); i++) {

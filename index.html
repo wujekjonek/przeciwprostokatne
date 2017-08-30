@@ -7,19 +7,28 @@
 <body>
 
 
-<h1>Okręg</h1>
+
+<div style="top: 50px; text-align:center">
+    <h1>Program rysuje wielokąt foremny i jego przeciwprostokątne.</h1>
+    <h2>Istnieje możliwość wpisania welokąta w okręg.</h2>
+    Podja ilosc wierzchołków wielokąta foremnego:&nbsp&nbsp&nbsp
+
+    <input id="okienkoa" value="">
+    <br><br>
 
 
-podja ilosc wierzchołków:&nbsp&nbsp&nbsp
-<input id="okienkoa" value="">
-<br><br>
-<button onclick=pentlaglowna()>rysuj krechy</button>
-<br><br>
+
+    Czy wpisac wielokąt w okręg?<input type="checkbox" id="myCheck">
+    <br><br>
+    <button onclick=pentlaglowna()>rysuj wielokąt</button>
+    <br><br>
 
 
-<canvas id="myCanvas" width="800" height="600"
-        style="border:1px solid #000000;">
-</canvas>
+    <canvas id="myCanvas" width="800" height="600"
+            style="border:1px solid #000000;">
+    </canvas>
+
+    </div>
 
 
 
