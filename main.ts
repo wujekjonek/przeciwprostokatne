@@ -30,7 +30,7 @@ function pentlaglowna() {
         okreg01.rysuj();
     }
 
-    // Kolo.rysuj(100, 100, 50, "blue");
+    //   Kolo.rysuj(100, 100, 50, "blue");
     //   Kolo.rysuj(100, 550, 20, "red")
 
     a = parseInt((<HTMLInputElement>document.getElementById("okienkoa")).value);
