@@ -1,4 +1,4 @@
-//Define Variables
+//zmienne
 var radius = 290;
 var point_size = 4;
 var center_x = 400;
@@ -18,7 +18,7 @@ function pentlaglowna() {
     var xx = document.getElementById("myCheck").checked;
     if (xx == true) {
         console.log("uuuuuu");
-        okreg01.rysuj();
+        this.okreg01.rysuj();
     }
     //   Kolo.rysuj(100, 100, 50, "blue");
     //   Kolo.rysuj(100, 550, 20, "red")
@@ -26,6 +26,7 @@ function pentlaglowna() {
     for (var i = 1; i < (a + 1); i++) {
         punkty01 = new Punkty(((360 / a) * i), 1, i);
         punkty01.rysuj();
+        // todo powyższe dziala z this.
     }
     // 3)
     PProstokatne.rysuj(mapx, mapy);

@@ -1,4 +1,4 @@
-//Define Variables
+//zmienne
 let radius = 290;
 let point_size = 4;
 let center_x = 400;
@@ -27,7 +27,8 @@ function pentlaglowna() {
 
     if (xx == true) {
         console.log("uuuuuu");
-        okreg01.rysuj();
+
+        this.okreg01.rysuj();
     }
 
     //   Kolo.rysuj(100, 100, 50, "blue");
@@ -38,6 +39,10 @@ function pentlaglowna() {
     for (let i = 1; i < (a + 1); i++) {
         punkty01 = new Punkty(((360 / a) * i), 1, i);
         punkty01.rysuj();
+
+
+// todo powyższe dziala z this.
+
     }
 
 // 3)

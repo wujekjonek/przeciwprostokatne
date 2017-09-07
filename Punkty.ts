@@ -3,10 +3,10 @@ class Punkty {
     // POLA KLASY
     angle: number;
     distance: number;
-    label: String;
+    label: string;
 
     // KONSTRUKTOR
-    constructor(a: number, b: number, c: String) {
+    constructor(a: number, b: number, c: string) {
         this.angle = a;
         this.distance = b;
         this.label = c;
